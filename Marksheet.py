@@ -6,7 +6,7 @@ import pandas as pd
 st.set_page_config(page_title='Mark Sheet2', layout='wide')
 
 main,ps,lg,mt,mp = st.columns(5)
-df = pd.read_csv("C:\\Users\\Tamizharasan\\Project_teamsup\\Version2\\MarkSheet.csv")
+df = pd.read_csv("MarkSheet.csv")
 
 with st.form(key = 'test',clear_on_submit=True):
     with main:
