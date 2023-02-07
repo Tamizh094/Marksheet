@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+import s3fs
 
 st.set_page_config(page_title='Mark Sheet2', layout='wide')
 
