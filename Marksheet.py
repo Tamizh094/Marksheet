@@ -7,7 +7,7 @@ import s3fs
 st.set_page_config(page_title='Mark Sheet2', layout='wide')
 
 main,ps,lg,mt,mp = st.columns(5)
-df = pd.read_csv("s3://projectfusion//MarkSheet.csv")
+df = pd.read_csv("s3://teamsup/MarkSheet.csv")
 
 with st.form(key = 'test',clear_on_submit=True):
     with main:
@@ -48,4 +48,4 @@ with st.form(key = 'test',clear_on_submit=True):
     if st.form_submit_button():
         st.dataframe(df_main)      
         df_final = pd.concat([df,df_main],ignore_index=True,axis=0,join='inner')
-        df = df_final.to_csv('s3:/projectfusion/MarkSheet.csv')
+        df = df_final.to_csv('s3://projectfusion/MarkSheet.csv')
