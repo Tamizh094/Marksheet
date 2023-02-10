@@ -51,4 +51,4 @@ with st.form(key = 'test',clear_on_submit=True):
         df_final = pd.concat([df,df_main],ignore_index=True,axis=0,join='inner')
         df = df_final.to_csv('s3://teamsup/MarkSheet.csv')
         
-img = st.file_uploader("Please upload mark sheet")
+img = st.file_uploader("Please upload mark sheet",accept_multiple_files=True)
