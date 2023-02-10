@@ -20,7 +20,7 @@ with st.form(key = 'test',clear_on_submit=True):
         st.markdown("Probability & Statistics")
         pq1 = st.number_input("Please enter your P&S Quiz 1 mark")
         pq2 = st.number_input("Please enter your P&S Quiz 2 mark")
-        %img = st.file_uploader("Please upload mark sheet")
+        #img = st.file_uploader("Please upload mark sheet")
         df_sub2 = pd.DataFrame({'Quiz 1':pq1,'Quiz 2':pq2},index=[0])
         df_main['Probability & Statistics'] = df_sub2['Quiz 1'] + df_sub2['Quiz 2']
         
