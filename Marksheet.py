@@ -12,8 +12,9 @@ df = pd.read_csv("s3://teamsup/MarkSheet.csv")
 with st.form(key = 'test',clear_on_submit=True):
     with main:
         st.markdown("Main Details")
-        name = st.text_input("please enter your name")
+        name = st.text_input("Please enter your name")
         bid = st.text_input("Please enter your bits id")
+        mailid = st.text_input("Please enter your Mail Id")
         df_main = pd.DataFrame({'Name':name,'Bits Id':bid},index=[0])
         
     with ps:
@@ -50,5 +51,7 @@ with st.form(key = 'test',clear_on_submit=True):
         st.dataframe(df_main)      
         df_final = pd.concat([df,df_main],ignore_index=True,axis=0,join='inner')
         df = df_final.to_csv('s3://teamsup/MarkSheet.csv')
-        
-img = st.file_uploader("Please upload mark sheet",accept_multiple_files=True)
+i = 4
+while i <= 0:
+    img = st.file_uploader("Please upload mark sheet",accept_multiple_files=True)
+    i += 1
