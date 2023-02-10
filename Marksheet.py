@@ -24,12 +24,12 @@ with st.form(key = 'test',clear_on_submit=True):
         df_sub2 = pd.DataFrame({'Quiz 1':pq1,'Quiz 2':pq2},index=[0])
         df_main['Probability & Statistics'] = df_sub2['Quiz 1'] + df_sub2['Quiz 2']
         
-    with lg:
         st.markdown("Linear Algebra")
         lq1 = st.number_input("Please enter your L&A Quiz 1 mark")
         lq2 = st.number_input("Please enter your L&A Quiz 2 mark")
         df_sub1 = pd.DataFrame({'Quiz 1':lq1,'Quiz 2':lq2},index=[0])
         df_main['Linear Algebra'] = df_sub1['Quiz 1'] + df_sub1['Quiz 2']
+        
         
     with mt:
         st.markdown("Mechanical Technology")
@@ -37,8 +37,7 @@ with st.form(key = 'test',clear_on_submit=True):
         mq2 = st.number_input("Please enter your MT Quiz 2 mark")
         df_sub3 = pd.DataFrame({'Quiz 1':mq1,'Quiz 2':mq2},index=[0])
         df_main['Mech Technology'] = df_sub3['Quiz 1'] + df_sub3['Quiz 2']
-    
-    with mp:
+        
         st.markdown("Mechanical Measurements")
         pq1 = st.number_input("Please enter your MM Quiz 1 mark")
         pq2 = st.number_input("Please enter your MM Quiz 2 mark")
