@@ -14,7 +14,7 @@ with st.form(key = 'test',clear_on_submit=True):
         st.markdown("Main Details")
         name = st.text_input("Please enter your name")
         bid = st.text_input("Please enter your bits id")
-        mailid = st.text_input("Please enter your Mail Id")
+        mailid = st.text_input("Please enter your Personal Mail Id")
         df_main = pd.DataFrame({'Name':name,'Bits Id':bid},index=[0])
         
     with ps:
